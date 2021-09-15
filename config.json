@@ -1,0 +1,6 @@
+{
+    "key": "password",
+    "actions": {
+        "shutdown": "shutdown 0"
+    }
+}
