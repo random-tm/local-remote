@@ -15,9 +15,13 @@ for (const action in data.actions) {
   })
 }
 
-setTimeout(() => {
-  exec(data.start);
-}, 5000)
+if(data.startDelay){
+  setTimeout(() => {
+    if(data.start){
+      exec(data.start);
+    }
+  }, data.startDelay)
+}
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
