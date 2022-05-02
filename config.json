@@ -1,6 +1,8 @@
 {
     "key": "password",
+    "startDelay": 10000,
     "actions": {
-        "shutdown": "shutdown 0"
+        "shutdown": "shutdown 0",
+        "echo": "touch %word"
     }
 }
