@@ -14,7 +14,6 @@ for (const action in data.actions) {
   app.post(`/${data.key}/${action}`, (req, res) => {
     const actionToExec = data.actions[action];
     res.send(`Executing: ${actionToExec}`);
-    console.log(req.body);
     const parsedActionToExec = replaceWithVals(actionToExec, req.body);
     exec(parsedActionToExec);
   })
